@@ -13,7 +13,7 @@ public class Post {
     protected static String url = "https://be-qa.alta.id/api/";
     public static String fullname="";
     public static String email="";
-    protected static String password="pass140700";
+    protected static String Password="user123";
 
     //scenario 1
     @Step("user set endpoint for login")
@@ -69,7 +69,7 @@ public class Post {
         JSONObject requestBody = new JSONObject();
         requestBody.put( "fullname",fullname );
         requestBody.put( "email",email );
-        requestBody.put( "password", password);
+        requestBody.put( "password", Password);
 
         SerenityRest.given().header("Content-Type","application/json").body(requestBody.toJSONString()).post(setEndpointsRegister());
     }
